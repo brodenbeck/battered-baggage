@@ -1,6 +1,6 @@
 import { attributes, react as HomeContent } from '../content/home.md';
 
-function home() {
+const Home = () => {
   const { title } = attributes;
 
   return (
@@ -9,6 +9,6 @@ function home() {
       <HomeContent />
     </>
   );
-}
+};
 
-export default home;
+export default Home;
