@@ -17,7 +17,14 @@ class MyDocument extends Document {
   render() {
     return (
       <html lang="en">
-        <Head>{this.props.styleTags}</Head>
+        <Head>
+          {this.props.styleTags}
+          <script
+            data-ad-client="ca-pub-4174432471031860"
+            async
+            src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"
+          />
+        </Head>
         <body>
           <Main />
           <NextScript />
