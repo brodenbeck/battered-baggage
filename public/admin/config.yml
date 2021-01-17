@@ -11,15 +11,56 @@ collections:
       name: "home"
       file: "content/home.md"
       fields:
-        - { label: "Title", name: "title", widget: "string"}
-        - { label: "Body", name: "body", widget: "markdown"}
-  - name: "posts"
-    label: "Posts"
-    folder: "content/posts"
+        - { label: "Title", name: "title", widget: "string" }
+        - { label: "Body", name: "body", widget: "markdown" }
+  - name: "nationalParks"
+    label: "National Parks"
+    folder: "content/national-parks"
     create: true
     fields:
-      - { label: "Title", name: "title", widget: "string" }
-      - { label: "Location", name: "location", widget: "select", options: ["Rome", "Paris", "Kentucky", "Toronto", "Morocco", "Utah"]}
+      - { label: "Name", name: "title", widget: "string" }
+      - { label: "Location", name: "location", widget: "string" }
       - { label: "Publish Date", name: "date", widget: "datetime" }
       - { label: "Featured Image", name: "image", widget: "image" }
-      - { label: "Body", name: "body", widget: "markdown" }
+      - { label: "Introduction", name: "introduction", widget: "markdown" }
+      - { label: "API ID", name: "apiId", widget: "string" }
+      - label: "Post"
+        name: "post"
+        widget: "list"
+        fields:
+        - { label: "Title", name: "title", widget: "string" }
+        - { label: "Publish Date", name: "date", widget: "datetime" }
+        - label: "Type"
+          name: "type"
+          widget: "select"
+          options:
+          - { label: "Post", value: "post" }
+          - { label: "Hiking", value: "hiking" }
+          - { label: "Things to Do", value: "thingsToDo" }
+        - { label: "Featured Image", name: "image", widget: "image" }
+        - { label: "Body", name: "body", widget: "markdown" }
+  - name: "cities"
+    label: "Cities"
+    folder: "content/cities"
+    create: true
+    fields:
+    - { label: "City", name: "title", widget: "string" }
+    - { label: "Location", name: "location", widget: "string" }
+    - { label: "Publish Date", name: "date", widget: "datetime" }
+    - { label: "Featured Image", name: "image", widget: "image" }
+    - { label: "Introduction", name: "introduction", widget: "markdown" }
+    - label: "Post"
+      name: "post"
+      widget: "list"
+      fields:
+        - { label: "Title", name: "title", widget: "string" }
+        - { label: "Publish Date", name: "date", widget: "datetime" }
+        - label: "Type"
+          name: "type"
+          widget: "select"
+          options:
+          - { label: "Post", value: "post" }
+          - { label: "Food & Drink", value: "foodAndDrink" }
+          - { label: "Things to Do", value: "thingsToDo" }
+        - { label: "Featured Image", name: "image", widget: "image" }
+        - { label: "Body", name: "body", widget: "markdown" }
